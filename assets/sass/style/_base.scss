@@ -520,18 +520,23 @@ label, input {
 	display: block;
 }
 label {
-	width: 15%;
 	margin-bottom: 6px;
+
+	@include laptop() {
+		// width: 15%;
+	}
 }
 input, textarea {
 	width: 99%;
 	margin-bottom: 10px;
-	// border-color: $orange;
 }
 .sub-button {
 	width: 100px;
 	float: right;
 	margin-right: 0;
+}
+.sub-button {
+
 }
 
 // FOOTER
@@ -543,4 +548,12 @@ footer {
 }
 .copy {
 	text-align: center;
+}
+footer a:active, footer a:link, footer a:visited {
+	color: $offwhite;
+	font-weight: 400;
+	@include hoverTransition (.5s, ease-in-out);
+}
+footer a:hover {
+	color: $dark-grey;
 }
