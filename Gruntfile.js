@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
-	//Project configuration. 
+	//Project configuration.
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		compass: {
@@ -62,7 +62,7 @@ module.exports = function(grunt) {
 						cwd: 'assets/fonts/',
 						src: ['**/*'],
 						dest: 'dist/assets/fonts/',
-						filter: 'isFile'						
+						filter: 'isFile'
 					},
 					// img
 					{
@@ -116,7 +116,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-compass'); /*compass plugin*/
 	grunt.loadNpmTasks('grunt-contrib-watch'); /*watch plugin*/
 	grunt.loadNpmTasks('grunt-contrib-concat'); /*concatenate plugin - concatenate files*/
-	grunt.loadNpmTasks('grunt-contrib-jshint'); 
+	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-uglify'); /*uglify plugin - contatenate js*/
 	grunt.loadNpmTasks('grunt-contrib-copy'); /*copy plugin - copies files and folders*/
 	grunt.loadNpmTasks('grunt-browser-sync'); /*sync browser to show css changes without browser refresh*/
