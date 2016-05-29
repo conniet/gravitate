@@ -6,6 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- TITLE -->
 	<title>gravit&#257;te App</title>
+	<!--link to favicon-->
+	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
 	<!-- META TAGS -->
 	<meta content="gravitte app website, stay in touch out of sight" name="description"></meta>
 	<meta content="gravitte, gravitte app, stay connected, connected" name="keywords"></meta>
@@ -21,7 +23,7 @@
 	<!-- START NAVIGATION -->
 	<nav>
 		<!-- LOGO -->
-		<div class="home-logo"><a href="index.html"><img src="assets/img/nav_logo.gif"></a></div>
+		<div class="home-logo"><a href="index.html"><img src="assets/img/logo.png"></a></div>
 		<!-- MOBILE HAMBURGER ICON -->
 		<i id="menu" class="fa fa-bars fa-lg"></i>
 		<!-- NAVIGATION MENU -->
@@ -47,17 +49,17 @@
 				<p>Becoming a sponsor of gravit&#257;te means your business will be promoted on the gravit&#257;te app. Your boothe will be added to the gravit&#257;te map page.</p>
 				<p>To become a sponsor please fill out the form below and we will contact you as soon as possible. We appreciate your interest in sponsoring gravit&#257;te!</p>
 				<form method="post" name="emailSponsorForm" action="contact.php">
-					<label for="Sender name">Name :</label>
-					<input name="sender" type="text" placeholder="Jane Smith">
-					<label for="Sender email">Email :</label>
-					<input name="emailAddress" type="text" placeholder="janesmith@email.com">
-					<label for="Company Name">Company :</label>
-					<input name="Company" type="text">
+					<label for="senderName">Name :</label>
+					<input name="sender" type="text" id="sender" placeholder="Jane Smith">
+					<label for="Email">Email :</label>
+					<input name="emailAddress" type="text" id="email" placeholder="janesmith@email.com">
+					<label for="companyName">Company :</label>
+					<input name="Company" id="company" type="text">
 					<label for="Company website">Website :</label>
-					<input name="Website" type="text">
+					<input name="Website" id="website" type="text">
 					<label for="Message">Message :</label>
 					<textarea name="Message" id="message" rows="10"></textarea>
-					<input type="submit" value="submit" class="sub-button">
+					<input type="submit" id="submit" value="submit" class="sub-button">
 				</form>
 <!-- 				<p>Alternative to expanding on what it means to be a sponsor: A contact page. Look at <a href="https://www.honest.com/about-us/vendor-inquiry">The Honest Co.</a> for example.</p>
  -->			</div>
@@ -71,9 +73,14 @@
 			1234 Planet St.<br>
 			San Francisco, CA 94108</p>
 			<p><a href="mailto:gravitate.contact@gmail.com">gravitate.contact@gmail.com</a></p>
-			<div class="social">Social media icons go here</div>
-			<p class="copy">&copy;2016 gravit&#257;te</p>
-		</div>
+			</div>
+			<div class="social">
+				<h3>follow us</h3>
+				<a href="https://www.facebook.com"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+				<a href="https://www.instagram.com"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+				<a href="https://www.twitter.com"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+			</div>
+			<div class="copy">&copy;2016 gravit&#257;te</div>
 	</footer>
 </body>
 </html>
