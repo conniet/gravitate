@@ -7,6 +7,7 @@ body {
 	font-size: 100%;
 	width: 100%;
 	height: 100%;
+	color: $dark-grey;
 }
 .container {
 	width: 96%;
@@ -435,7 +436,7 @@ blockquote {
 }
 
 // BUTTON
-button {
+a > button {
 	width: 90%;
 	border: none;
 	margin: 50px 5%;
@@ -444,14 +445,21 @@ button {
 	text-transform: uppercase;
 	color: $offwhite;
 	font-weight: bold;
+	@include hoverTransition (.5s, ease-in-out);
 
 	// SCREEN MIN-WIDTH 600px
 	@include tablet() {
 		margin-top: 70px;
-		width: 35%;
-		margin: 70px 32.5% 60px;
+		width: 40%;
+		margin: 70px 30% 60px;
 		padding: 30px 60px;
 		border: none;
+	}
+
+	// SCREEN MIN-WIDTH 1280px
+	@include laptop() {
+		width: 35%;
+		margin: 70px 32.5% 60px;
 	}
 
 	// SCREEN MIN-WIDTH 1440px
@@ -466,6 +474,11 @@ button {
 		margin-left: 35%;
 		margin-right: 35%;
 	}
+}
+
+a > button:hover {
+	background-color: $purple;
+	font-weight: bold;
 }
 
 // SPONSOR PAGE
@@ -485,19 +498,23 @@ button {
 .sponsor-description {
 	width: 100%;
 
+	// SCREEN MIN-WIDTH 600px
 	@include tablet() {
 		width: 60%;
 		margin: 0 auto;
 	}
 
+	// SCREEN MIN-WIDTH 1280px
 	@include laptop() {
 		width: 50%;
 	}
 
+	// SCREEN MIN-WIDTH 1440px
 	@include desktop() {
 		width: 46%;
 	}
 
+	// SCREEN MIN-WIDTH 1920px
 	@include lgscreen() {
 		width: 40%;
 	}
@@ -522,6 +539,7 @@ label, input {
 label {
 	margin-bottom: 6px;
 
+	// SCREEN MIN-WIDTH 1280px
 	@include laptop() {
 		// width: 15%;
 	}
@@ -545,15 +563,77 @@ footer {
 	margin-top: 50px 0;
 	padding: 20px 2%;
 	background-color: $orange;
-}
-.copy {
-	text-align: center;
+	// CLEAR FLOAT
+	&::after {
+		clear: both;
+		visibility: hidden;
+		content: "";
+		display: block;
+		height: 0;
+	}
+
+	// SCREEN MIN-WIDTH 1024px
+	@include tablet-w() {
+		width: 84%;
+		// margin: 0 auto;
+		padding: 20px 8%;
+	}
 }
 footer a:active, footer a:link, footer a:visited {
 	color: $offwhite;
 	font-weight: 400;
+	// HOVER TRANSITION
 	@include hoverTransition (.5s, ease-in-out);
 }
 footer a:hover {
-	color: $dark-grey;
+	color: $purple;
+}
+.contact {
+	width: 100%;
+
+	// SCREEN MIN-WIDTH 600px
+	@include tablet() {
+		float: left;
+		width: 50%;
+	}
+}
+.sponsor-us {text-transform: uppercase;}
+.social {
+	width: 46%;
+	float: left;
+	text-align: justify;
+	margin-top: -16px;
+	i {
+		color: $offwhite;
+		@include hoverTransition (.5s, ease-in-out);
+	}
+	i:hover {
+		color: $purple;
+	}
+
+	// SCREEN MIN-WIDTH 600px
+	@include tablet() {
+		float: right;
+		width: 20%;
+		margin-top: 0;
+	}
+}
+.social::after {
+	content: '';
+	width: 100%;
+	display: inline-block;
+}
+.social > h3 {
+	color: $offwhite;
+	font-weight: bold;
+
+	// SCREEN MIN-WIDTH 600px
+	@include tablet() {
+		text-align: center;
+	}
+}
+.copy {
+	float: left;
+	width: 100%;
+	text-align: center;
 }
