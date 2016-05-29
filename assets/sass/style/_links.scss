@@ -1,11 +1,11 @@
 // LINK COLORS AND EFFECTS
 a {text-decoration: none;}
 a:active, a:link, {
-	color: $purple;
+	color: $orange;
 	font-weight: bold;
 	@include hoverTransition (.5s, ease-in-out);
 }
-a:visited {color: $purple;}
+a:visited {color: $orange;}
 a:hover {
-	color: $orange;
+	color: $purple;
 }
