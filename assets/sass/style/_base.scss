@@ -86,13 +86,8 @@ blockquote {
 .section1 {
 	width: 100%;
 
-	// SCREEN MIN-WIDTH 1024px
-	@include tablet-w() {
-		position: relative;
-		width: 100%;
-		padding: 0;
-		margin: 0 auto;
-
+	// SCREEN MIN-WIDTH 600px
+	@include tablet() {
 		// CLEAR FLOAT
 		&::after {
 			clear: both;
@@ -101,6 +96,14 @@ blockquote {
 			display: block;
 			height: 0;
 		}
+	}
+
+	// SCREEN MIN-WIDTH 1024px
+	@include tablet-w() {
+		position: relative;
+		width: 100%;
+		padding: 0;
+		margin: 0 auto;
 	}
 }
 
@@ -118,30 +121,30 @@ blockquote {
 
 	// SCREEN MIN-WIDTH 1024px
 	@include tablet-w() {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 800px;
-		transform: rotate(-90deg) translateX(-712px) translateY(88px); /* rotate element, move it along x-axis, move it along y-axis */
-		transform-origin: bottom left; /* identify the point of the element where the element will move from */
-		padding: 0;
+		// position: absolute;
+		// top: 0;
+		// left: 0;
+		// width: 800px;
+		// transform: rotate(-90deg) translateX(-712px) translateY(88px); /* rotate element, move it along x-axis, move it along y-axis */
+		// transform-origin: bottom left; /* identify the point of the element where the element will move from */
+		padding: 10px 0;
 	}
 
 	// SCREEN MIN-WIDTH 1280px
 	@include laptop() {
-		width: 750px;
-		transform: rotate(-90deg) translateX(-672px) translateY(88px); /* rotate element, move it along x-axis, move it along y-axis */
+		// width: 750px;
+		// transform: rotate(-90deg) translateX(-672px) translateY(88px); /* rotate element, move it along x-axis, move it along y-axis */
 	}
 
 	// SCREEN MIN-WIDTH 1440px
 	@include desktop() {
-		width: 704px;
-		transform: rotate(-90deg) translateX(-630px) translateY(88px); /* rotate element, move it along x-axis, move it along y-axis */
+		// width: 704px;
+		// transform: rotate(-90deg) translateX(-630px) translateY(88px); /* rotate element, move it along x-axis, move it along y-axis */
 	}
 	// SCREEN MIN-WIDTH 1920px
 	@include lgscreen() {
-		width: 702px;
-		transform: rotate(-90deg) translateX(-626px) translateY(88px); /* rotate element, move it along x-axis, move it along y-axis */
+		// width: 702px;
+		// transform: rotate(-90deg) translateX(-626px) translateY(88px); /* rotate element, move it along x-axis, move it along y-axis */
 	}
 }
 .description1 {
@@ -150,23 +153,59 @@ blockquote {
 
 	// SCREEN MIN-WIDTH 600px
 	@include tablet() {
+		float: left;
 		width: 60%;
+		padding-bottom: 40px;
 	}
 
 	// SCREEN MIN-WIDTH 1024px
 	@include tablet-w() {
-		width: 30%;
-		margin-left: 16%;
+		// width: 30%;
+		// margin-left: 16%;
 	}
 
 	// SCREEN MIN-WIDTH 1280px
 	@include laptop() {
+		width: 45%;
+		margin-left: 5%;
 		padding-bottom: 20px;
+		text-align: right;
 	}
 
 	// SCREEN MIN-WIDTH 1440px
 	@include lgscreen() {
-		margin-left: 18%;
+		width: 35%;
+		margin-left: 15%;
+	}
+}
+.illustration-1 {
+	display: block;
+	width: 40%;
+	margin: 16px auto;
+
+	// SCREEN MIN-WIDTH 600px
+	@include tablet() {
+		display: inline-block;
+		float: right;
+		width: 20%;
+		margin: 23px 10% 0;
+	}
+
+	// SCREEN MIN-WIDTH 280px
+	@include laptop() {
+		Width: 15%;
+		margin: 23px 17.5% 0;
+	}
+
+	@include desktop() {
+		width: 12%;
+		margin: 23px 19%;
+	}
+
+	// SCREEN MIN-WIDTH 1440px
+	@include lgscreen() {
+		width: 10%;
+		margin: 23px 30% 0 0;
 	}
 }
 .description2 {
@@ -175,25 +214,64 @@ blockquote {
 
 	// SCREEN MIN-WIDTH 600px
 	@include tablet() {
+		float: right;
 		width: 60%;
-		margin-left: 40%;
+		// margin-left: 40%;
+		padding-bottom: 40px;
+		margin: 30px 0;
 	}
 
 	// SCREEN MIN-WIDTH 1024px
 	@include tablet-w() {
-		width: 30%;
-		margin-left: 22%;
+		// width: 30%;
+		// margin-left: 22%;
 	}
 
 	// SCREEN MIN-WIDTH 1280px
 	@include laptop() {
-		margin-left: 30%;
+		width: 45%;
 		padding-bottom: 20px;
+		margin: 60px 0;
+	}
+
+	@include desktop() {
+		margin: 60px 5% 60px 0;
 	}
 
 	// SCREEN MIN-WIDTH 1440px
 	@include lgscreen() {
-		margin-left: 32%;
+		width: 35%;
+		margin: 60px 15% 60px 0;
+	}
+}
+.illustration-2 {
+	display: block;
+	width: 40%;
+	margin: 16px auto;
+
+	// SCREEN MIN-WIDTH 600px
+	@include tablet() {
+		display: inline-block;
+		float: left;
+		width: 20%;
+		margin: 53px 10% 50px;
+	}
+
+	// SCREEN MIN-WIDTH 280px
+	@include laptop() {
+		Width: 15%;
+		margin: 34px 17.5%;
+	}
+
+	@include desktop() {
+		width: 12%;
+		margin: 85px 16.5% 0;
+	}
+
+	// SCREEN MIN-WIDTH 1440px
+	@include lgscreen() {
+		width: 10%;
+		margin: 84px 0 0 30%;
 	}
 }
 .description3 {
@@ -202,96 +280,67 @@ blockquote {
 
 	// SCREEN MIN-WIDTH 600px
 	@include tablet() {
+		float: left;
 		width: 60%;
 	}
 
 	// SCREEN MIN-WIDTH 1024px
 	@include tablet-w() {
-		width: 30%;
-		margin-left: 16%;
-	}
-
-	// SCREEN MIN-WIDTH 1280px
-	@include lgscreen() {
-		padding-top: 20px;
-		margin-left: 18%;
-	}
-}
-.phone-mockup {
-	width: 100%;
-
-	// SCREEN MIN-WIDTH 600px
-	@include tablet() {
-		max-width: 375px;
-		margin-left: 40%;
-	}
-
-	// SCREEN MIN-WIDTH 1024px
-	@include tablet-w() {
-		margin-left: 0;
-		float: right;
-		position: absolute;
-		top: 8%;
-		right: 0;
+		// width: 30%;
+		// margin-left: 16%;
 	}
 
 	// SCREEN MIN-WIDTH 1280px
 	@include laptop() {
-		top: 3%;
+		width: 45%;
+		margin-left: 5%;
+		padding-bottom: 20px;
+		text-align: right;
+	}
+
+	@include desktop() {
+		margin-top: 82px;
+	}
+
+	// SCREEN MIN-WIDTH 1280px
+	@include lgscreen() {
+		width: 35%;
+		margin: 60px 0 0 15%;
+	}
+}
+.illustration-3 {
+	display: block;
+	width: 40%;
+	margin: 16px auto;
+
+	// SCREEN MIN-WIDTH 600px
+	@include tablet() {
+		display: inline-block;
+		float: right;
+		width: 20%;
+		margin: 23px 10% 0;
+	}
+
+	// SCREEN MIN-WIDTH 280px
+	@include laptop() {
+		Width: 15%;
+		margin: -22px 17.5%;
+	}
+
+	@include desktop() {
+		width: 12%;
+		margin: 24px 19%;
+	}
+
+	// SCREEN MIN-WIDTH 1440px
+	@include lgscreen() {
+		width: 10%;
+		margin: 23px 30% 0 0;
 	}
 }
 
 // DEMO
 .section2 {
-	width: 100%;
-	margin-top: 50px;
-
-	// SCREEN MIN-WIDTH 600px
-	@include tablet() {
-		margin-top: 76px;
-	}
-
-	// SCREEN MIN-WIDTH 1024px
-	@include tablet-w() {
-		margin-top: 150px;
-		position: relative;
-		& > .heading {
-			width: 408px;
-			transform: rotate(-90deg) translateX(-328px) translateY(88px); /* rotate element, move it along x-axis, move it along y-axis */
-		}
-	}
-
-	// SCREEN MIN-WIDTH 1440px
-	@include desktop() {
-		& > .heading {
-			width: 466px;
-			transform: rotate(-90deg) translateX(-386px) translateY(88px); /* rotate element, move it along x-axis, move it along y-axis */
-		}
-	}
-}
-.demo-info {
-	width: 100%;
-
-	// SCREEN MIN-WIDTH 1024px
-	@include tablet-w() {
-		width: 60%;
-		max-width: 720px;
-		margin-left: 16%;
-		p {
-			width: 94%;
-			padding: 0 3%;
-		}
-	}
-
-	// SCREEN MIN-WIDTH 1920px
-	@include lgscreen() {
-		margin-left: 18%;
-	}
-}
-
-// TESTIMONIALS
-.section3 {
-	margin-top: 50px;
 	width: 100%;
 
 	// SCREEN MIN-WIDTH 600px
@@ -300,138 +349,161 @@ blockquote {
 	}
 
 	// SCREEN MIN-WIDTH 1024px
-	@include tablet-w() {
+	@include tablet-w {
+		margin-top: 100px;
+	}
+}
+.phone-mockup {
+	width: 100%;
+	.iPhone {display: none;}
+
+	// SCREEN MIN-WIDTH 600px
+	@include tablet() {
+		.iPhone {
+			display: block;
+		}
+		max-width: 350px;
+		margin: 0 auto;
+		position: relative;
+	}
+}
+.phone-mockup .slider-wrapper {
+	// SCREEN MIN-WIDTH 600px
+	@include tablet() {
+		position: absolute;
+		max-width: 311px;
+		top: 92px;
+		left: 19px;
+	}
+}
+
+
+// TESTIMONIALS
+.section3 {
+	margin-top: 50px;
+	width: 100%;
+
+	// SCREEN MIN-WIDTH 600px
+	@include tablet() {
 		margin-top: 100px;
 	}
 
-	ul {
-		list-style: none;
+	// ul {
+	// 	list-style: none;
+	// 	margin: 0 auto;
+	// 	padding: 0;
+
+	// 	// SCREEN MIN-WIDTH 600px
+	// 	@include tablet() {
+	// 		width: 77%;
+	// 	}
+
+	// 	// SCREEN MIN-WIDTH 1024px
+	// 	@include tablet-w() {
+	// 		width: 100%;
+	// 	}
+
+	// 	@include laptop() {
+	// 		width: 90%;
+	// 	}
+	// }
+	// li {
+	// 	// SCREEN MIN-WIDTH 600px
+	// 	@include tablet() {
+	// 		display: block;
+	// 		width: 100%;
+	// 		margin: 40px 0;
+
+	// 		// CLEAR FLOAT
+	// 		&::after {
+	// 			clear: both;
+	// 			visibility: hidden;
+	// 			content: "";
+	// 			display: block;
+	// 			height: 0;
+	// 		}
+	// 	}
+
+	// 	// SCREEN MIN-WIDTH 1024px
+	// 	@include tablet-w() {
+	// 		display: inline-block;
+	// 		width: 30%;
+	// 		&:nth-child(2) {
+	// 			margin: 0 4.5%;
+	// 		}
+	// 	}
+
+	// 	@include laptop() {
+	// 		width: 25%;
+	// 		&:nth-child(2) {
+	// 			margin: 0 12%;
+	// 		}
+	// 	}
+	// }
+	// li > img {
+	// 	// SCREEN MIN-WIDTH 600px
+	// 	@include tablet() {
+	// 		display: inline-block;
+	// 		float: left;
+	// 		width: 45%;
+	// 	}
+
+	// 	// SCREEN MIN-WIDTH 1024px
+	// 	@include tablet-w() {
+	// 		display: inline-block;
+	// 		float: none;
+	// 		width: 100%;
+	// 		margin: 0;
+	// 	}
+	// }
+	// li > p {
+	// 	font-style: italic;
+
+	// 	// SCREEN MIN-WIDTH 600px
+	// 	@include tablet() {
+	// 		display: inline-block;
+	// 		float: right;
+	// 		width: 45%;
+	// 		vertical-align: top;
+	// 		margin: 12% 5%;
+	// 	}
+
+	// 	// SCREEN MIN-WIDTH 1024px
+	// 	@include tablet-w() {
+	// 		display: inline-block;
+	// 		float: none;
+	// 		margin: 0 0;
+	// 		width: 90%;
+	// 		padding: 0 5%;
+	// 	}
+	// }
+	// li:nth-child(2) {
+	// 	img {
+	// 		float: right;
+
+	// 		// SCREEN MIN-WIDTH 1024px
+	// 		@include tablet-w() {
+	// 			float: none;
+	// 		}
+	// 	}
+	// 	p {
+	// 		float: left;
+
+	// 		// SCREEN MIN-WIDTH 1024px
+	// 		@include tablet-w() {
+	// 			float: none;
+	// 		}
+	// 	}
+	// }
+}
+.section3 .slider-wrapper {
+	// margin-top: 50px;
+	width: 100%;
+
+	@include tablet() {
+		margin-top: 100px;
+		width: 50%;
 		margin: 0 auto;
-		padding: 0;
-
-		// SCREEN MIN-WIDTH 600px
-		@include tablet() {
-			width: 77%;
-		}
-
-		// SCREEN MIN-WIDTH 1024px
-		@include tablet-w() {
-			width: 100%;
-		}
-	}
-	li {
-		// SCREEN MIN-WIDTH 600px
-		@include tablet() {
-			display: block;
-			width: 100%;
-
-			// CLEAR FLOAT
-			&::after {
-				clear: both;
-				visibility: hidden;
-				content: "";
-				display: block;
-				height: 0;
-			}
-		}
-
-		// SCREEN MIN-WIDTH 1024px
-		@include tablet-w() {
-			display: inline-block;
-			width: 30%;
-		}
-	}
-	li > img {
-		// SCREEN MIN-WIDTH 600px
-		@include tablet() {
-			display: inline-block;
-			float: left;
-			width: 45%;
-		}
-
-		// SCREEN MIN-WIDTH 1024px
-		@include tablet-w() {
-			display: inline-block;
-			float: none;
-			width: 100%;
-			margin: 0;
-		}
-	}
-	li > p {
-		font-style: italic;
-
-		// SCREEN MIN-WIDTH 600px
-		@include tablet() {
-			display: inline-block;
-			float: right;
-			width: 45%;
-			vertical-align: top;
-			margin: 12% 5%;
-		}
-
-		// SCREEN MIN-WIDTH 1024px
-		@include tablet-w() {
-			display: inline-block;
-			float: none;
-			margin: 0 0;
-			width: 90%;
-			padding: 0 5%;
-		}
-	}
-	li:nth-child(2) {
-		img {
-			float: right;
-
-			// SCREEN MIN-WIDTH 1024px
-			@include tablet-w() {
-				float: none;
-			}
-		}
-		p {
-			float: left;
-
-			// SCREEN MIN-WIDTH 1024px
-			@include tablet-w() {
-				float: none;
-			}
-		}
-	}
-}
-.testimony1 {
-	width: 100%;
-
-	// SCREEN MIN-WIDTH 600px
-	@include tablet() {
-		margin-right: 10%;
-	}
-
-	// SCREEN MIN-WIDTH 1024px
-	@include tablet-w() {
-		width: 20%;
-		margin: 0 2.2% 0  0;
-	}
-}
-.testimony2 {
-	width: 100%;
-
-	// SCREEN MIN-WIDTH 600px
-	@include tablet() {
-		margin-right: 4.1%;
-	}
-
-	// SCREEN MIN-WIDTH 1024px
-	@include tablet-w() {
-		width: 20%;
-		margin: 0 2.2%;
-	}
-}
-.testimony3 {
-	width: 100%;
-
-	// SCREEN MIN-WIDTH 1024px
-	@include tablet-w() {
-		width: 20%;
-		margin: 0 0 0 2.2%;
 	}
 }
 
