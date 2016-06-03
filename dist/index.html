@@ -45,54 +45,99 @@
 			<!-- SECTION HEADING -->
 			<div class="heading"><h1><span class="gravitate">gravit&#257;te</span> is...</h1></div>
 			<!-- FIRST PRODUCT DESCRIPTION -->
-			<div class="description1">
+			<div class="describe description1">
 				<h2>having a flexible meeting destination</h2>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
 			</div>
+			<img src="assets/img/logo.png" alt="" class="illustration-1">
 			<!-- SECOND PRODUCT DESCRIPTION -->
-			<div class="description2">
+			<div class="describe description2">
 				<h2>staying in touch with friends</h2>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
 			</div>
+			<img src="assets/img/logo.png" alt="" class="illustration-2">
 			<!-- THIRD PRODUCT DESCRIPTION -->
-			<div class="description3">
+			<div class="describe description3">
 				<h2>an all in one app</h2>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
 			</div>
+			<img src="assets/img/logo.png" alt="" class="illustration-3">
+		</div>
+		<div class="section2">
 			<!-- PRODUCT MOCKUP SLIDES -->
 			<div class="phone-mockup">
-				<img src="assets/img/phone-placeholder.gif">
-			</div>
-		</div>
-		<!-- DEMO SECTION -->
-		<div id="demo" class="section2">
-			<!-- SECTION HEADING -->
-			<div class="heading"><h1>demo</h1></div>
-			<!-- DEMO VIDEO AND DESCRIPTION -->
-			<div class="demo-info">
-				<img src="assets/img/videosm-placeholder.png">
-				<p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.</p>
+				<!--iPhone 6Plus Base-->
+				<img src="assets/img/iPhone6Plus.png" alt="iPhone 6Plus base" class="iPhone">
+				<!--begin slider-->
+				<div class="slider-wrapper">
+					<!--begin slides-->
+					<div id="slider">
+						<!--begin slide 1-->
+						<div class="slide1">
+							<img src="assets/img/phone-placeholder1.gif" alt="description">
+						</div><!--end slide 1-->
+						<!--begin slide 2-->
+						<div class="slide2">
+							<img src="assets/img/phone-placeholder2.gif" alt="description">
+						</div><!--end slide 2-->
+						<!--begin slide 3-->
+						<div class="slide3">
+							<img src="assets/img/phone-placeholder3.gif" alt="description">
+						</div><!--end slide 3-->
+					</div><!--end slides-->
+					<!--begin slider arrow navigation-->
+					<div id="slider-direction-nav"></div><!--end arrows-->
+					<!--begin slider button navigation-->
+       				<div id="slider-control-nav"></div><!--end buttons-->
+				</div><!--end slider-->
 			</div>
 		</div>
 		<!-- TESTIMONIAL SECTION -->
 		<div class="section3">
-			<ul>
-				<!-- FIRST TESTIMONIAL -->
-				<li class="testimony1">
+			<div class="heading"><h2>testimonials</h2></div>
+<!-- 			<ul>
+ -->				<!-- FIRST TESTIMONIAL -->
+<!-- 				<li class="testimony1">
 					<img src="assets/img/testimonial1-2.jpg">
 					<p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
 				</li>
-				<!-- SECOND TESTIMONIAL -->
-				<li class="testimony2">
+ -->				<!-- SECOND TESTIMONIAL -->
+<!-- 				<li class="testimony2">
 					<img src="assets/img/testimonial2.jpg">
 					<p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
 				</li>
-				<!-- THIRD TESTIMONIAL -->
-				<li class="testimony3">
+ -->				<!-- THIRD TESTIMONIAL -->
+<!-- 				<li class="testimony3">
 					<img src="assets/img/testimonial3.jpg">
 					<p>We lose each other at Pride every year, but gravit&#257;te makes it easy for us to find each other.</p>
 				</li>
 			</ul>
+ -->				<!--begin slider-->
+				<div class="slider-wrapper">
+					<!--begin slides-->
+					<div id="slider2">
+						<!--begin slide 1-->
+						<div class="slide1">
+							<img src="assets/img/testimonial1-2.jpg" alt="description">
+							<p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
+						</div><!--end slide 1-->
+						<!--begin slide 2-->
+						<div class="slide2">
+							<img src="assets/img/testimonial2.jpg" alt="description">
+							<p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
+						</div><!--end slide 2-->
+						<!--begin slide 3-->
+						<div class="slide3">
+							<img src="assets/img/testimonial3.jpg" alt="description">
+							<p>We lose each other at Pride every year, but gravit&#257;te makes it easy for us to find each other.</p>
+						</div><!--end slide 3-->
+					</div><!--end slides-->
+					<!--begin slider arrow navigation-->
+					<div id="slider-direction-nav2"></div><!--end arrows-->
+					<!--begin slider button navigation-->
+       				<div id="slider-control-nav2"></div><!--end buttons-->
+				</div><!--end slider-->
+
 			<!-- DOWNLOAD BUTTON -->
 			<a href="#"><button>download for ios</button></a>
 		</div>
@@ -116,4 +161,16 @@
 			<div class="copy">&copy;2016 gravit&#257;te</div>
 	</footer>
 </body>
+<script type="text/javascript">
+    $(document).ready(function() {
+        var slider = $('#slider').leanSlider({
+            directionNav: '#slider-direction-nav',
+            controlNav: '#slider-control-nav'
+        });
+        var slider = $('#slider2').leanSlider({
+            directionNav: '#slider-direction-nav2',
+            controlNav: '#slider-control-nav2'
+        });
+    });
+</script>
 </html>
