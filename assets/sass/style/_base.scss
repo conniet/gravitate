@@ -2,28 +2,33 @@
 
 // GENERAL ELEMENTS
 body {
+	background-color: $charcoal;
+	background-image: url('../img/bkg-01.png');
 	font-family: $site-font;
 	font-weight: $font-light;
 	font-size: 100%;
 	width: 100%;
 	height: 100%;
-	color: $dark-grey;
+	color: $light-grey;
+	color: rgba($offwhite, .7);
 }
 .container {
-	width: 96%;
-	padding: 0 2%;
+	// width: 96%;
+	width: 100%;
+	// padding: 0 2%;
 	font-size: 1em; /*equivalent to 16px*/
 
-	// SCREEN MIN-WIDTH 1024px
-	@include tablet-w() {
-		width: 84%;
-		margin: 0 auto;
-	}
+	// // SCREEN MIN-WIDTH 1024px
+	// @include tablet-w() {
+	// 	width: 84%;
+	// 	margin: 0 auto;
+	// }
 }
 img {
 	width: 100%;
 	max-width: 100%;
 }
+video {width: 100%;}
 .gravitate {
 	text-transform: lowercase;
 	color: $orange;
@@ -34,85 +39,94 @@ img {
 .intro {
 	width: 100%;
 	margin-bottom: 50px;
+	background-image: url('../img/video-still-sm.png');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: 50% 0;
+	height: 410px;
+	video {display: none;}
 
 	// SCREEN MIN-WIDTH 600px
 	@include tablet() {
+		background-image: url('../img/video-still-lg.png');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: 50% 0;
+		background-size: contain;
+		height: 580px;
 		margin-bottom: 56px;
 	}
 
 	// SCREEN MIN-WIDTH 1024px
 	@include tablet-w() {
+		video{display:block;}
+		height: auto;
 		margin-bottom: 70px;
 	}
 }
 
 // CATCH PHRASE
-blockquote {
-	width: 94%;
-	margin: 0 2%;
-}
-.catch-phrase {
-	margin-top: 30px;
-	font-style: italic;
-	h2 {
-		text-transform:lowercase;
-		color: $orange;
+// blockquote {
+// 	width: 94%;
+// 	margin: 0 2%;
+// }
+// .catch-phrase {
+// 	margin-top: 30px;
+// 	font-style: italic;
+// 	h2 {
+// 		text-transform:lowercase;
+// 		color: $orange;
 
-		// SCREEN MIN-WIDTH 600px
-		@include tablet() {
-			text-align: center;
-			display: inline-block;
-		}
-	}
-	h2:nth-child(2) {
-		text-align: right;
-		margin-top: -20px;
+// 		// SCREEN MIN-WIDTH 600px
+// 		@include tablet() {
+// 			text-align: center;
+// 			display: inline-block;
+// 		}
+// 	}
+// 	h2:nth-child(2) {
+// 		text-align: right;
+// 		margin-top: -20px;
 
-		// SCREEN MIN-WIDTH 600px
-		@include tablet() {
-			text-align: center;
-			display: inline-block;
-		}
-	}
+// 		// SCREEN MIN-WIDTH 600px
+// 		@include tablet() {
+// 			text-align: center;
+// 			display: inline-block;
+// 		}
+// 	}
 
-	// SCREEN MIN-WIDTH 600px
-	@include tablet() {
-		margin-top: 50px;
-		text-align: center;
-	}
-}
+// 	// SCREEN MIN-WIDTH 600px
+// 	@include tablet() {
+// 		margin-top: 50px;
+// 		text-align: center;
+// 	}
+// }
 
 // ABOUT
-.section1 {
-	width: 100%;
+#about {
+	padding-top: 44px;
 
-	// SCREEN MIN-WIDTH 600px
-	@include tablet() {
-		// CLEAR FLOAT
-		&::after {
-			clear: both;
-			visibility: hidden;
-			content: "";
-			display: block;
-			height: 0;
-		}
-	}
+}
 
-	// SCREEN MIN-WIDTH 1024px
-	@include tablet-w() {
-		position: relative;
-		width: 100%;
-		padding: 0;
-		margin: 0 auto;
+#mission {
+	width: 96%;
+	margin-bottom: 40px;
+	padding: 46px 2% 0;
+	text-align: center;
+	// color: $light-grey;
+
+	@include tablet(){
+		margin-bottom: 100px;
+
 	}
 }
 
 .heading {
 	width: 100%;
 	text-align: center;
-	background-color: $offwhite;
-	padding: 10px 0;
-	margin-bottom: 50px;
+	// background-color: $offwhite;
+	padding: 0;
+	margin-bottom: 60px;
+	// color: $light-grey;
 
 	// SCREEN MIN-WIDTH 600px
 	@include tablet() {
@@ -128,6 +142,7 @@ blockquote {
 		// transform: rotate(-90deg) translateX(-712px) translateY(88px); /* rotate element, move it along x-axis, move it along y-axis */
 		// transform-origin: bottom left; /* identify the point of the element where the element will move from */
 		padding: 10px 0;
+		margin: 20px auto 120px;
 	}
 
 	// SCREEN MIN-WIDTH 1280px
@@ -147,59 +162,124 @@ blockquote {
 		// transform: rotate(-90deg) translateX(-626px) translateY(88px); /* rotate element, move it along x-axis, move it along y-axis */
 	}
 }
-.description1 {
+
+.section1 {
 	width: 100%;
-	padding-bottom: 10px;
+
+	// SCREEN MIN-WIDTH 1024px
+	@include tablet-w() {
+		position: relative;
+		width: 100%;
+	}
+}
+
+#box {
+	width: 100%;
+	// background-color: $offwhite;
+	margin-bottom: 50px;
+	// color: $light-grey;
+	// color: rgba($offwhite, .7);
 
 	// SCREEN MIN-WIDTH 600px
 	@include tablet() {
-		float: left;
+		// CLEAR FLOAT
+		&::after {
+			clear: both;
+			visibility: hidden;
+			content: "";
+			display: block;
+			height: 0;
+		}
+		background-color: $charcoal;
+		background-color: rgba($charcoal, .9);
+		margin-bottom: 150px;
+	}
+
+	@include tablet-w() {
+		margin-bottom: 250px;
+	}
+}
+.description1 {
+	width: 96%;
+	padding: 10px 2% 10px;
+	margin: 0 auto 50px;
+	background-color: $charcoal;
+	background-color: rgba($charcoal, .8);
+	// color: $light-grey;
+	// color: rgba($offwhite, .7);
+
+	// SCREEN MIN-WIDTH 600px
+	@include tablet() {
+		// float: left;
+		background-color: rgba($charcoal, 0);
 		width: 60%;
-		padding-bottom: 40px;
+		// padding-bottom: 40px;
+		padding: 20px 20% 10px;
 	}
 
 	// SCREEN MIN-WIDTH 1024px
 	@include tablet-w() {
-		// width: 30%;
+		display: inline-block;
+		float: left;
+		width: 40%;
+		// margin-bottom: 250px;
 		// margin-left: 16%;
+		margin: 36px 0 0 10%;
+		padding: 0;
+		text-align: right;
+		// h2 {padding-top: 36px;}
 	}
 
 	// SCREEN MIN-WIDTH 1280px
 	@include laptop() {
-		width: 45%;
-		margin-left: 5%;
+		width: 38%;
+		margin-left: 12%;
 		padding-bottom: 20px;
 		text-align: right;
 	}
 
+	@include desktop() {
+		width: 34%;
+		margin-left: 16%;
+		margin-top: 70px;
+	}
+
 	// SCREEN MIN-WIDTH 1440px
 	@include lgscreen() {
-		width: 35%;
-		margin-left: 15%;
+		width: 26%;
+		margin-left: 24%;
 	}
 }
 .illustration-1 {
 	display: block;
 	width: 40%;
-	margin: 16px auto;
+	margin: 0 auto;
+	padding-bottom: 10px;
 
 	// SCREEN MIN-WIDTH 600px
 	@include tablet() {
+		// display: inline-block;
+		// float: right;
+		width: 20%;
+		// margin: 23px 10% 0;
+		margin: 0 40%;
+	}
+
+	@include tablet-w() {
 		display: inline-block;
 		float: right;
-		width: 20%;
-		margin: 23px 10% 0;
+		margin: 0 15%;
 	}
 
 	// SCREEN MIN-WIDTH 280px
 	@include laptop() {
-		Width: 15%;
-		margin: 23px 17.5% 0;
+		// Width: 15%;
+		// margin: 0 18% 0 12%;
 	}
 
 	@include desktop() {
-		width: 12%;
-		margin: 23px 19%;
+		// width: 12%;
+		// margin: 23px 19%;
 	}
 
 	// SCREEN MIN-WIDTH 1440px
@@ -209,63 +289,86 @@ blockquote {
 	}
 }
 .description2 {
-	width: 100%;
-	padding-bottom: 10px;
+	width: 96%;
+	padding: 10px 2% 10px;
+	margin: 0 auto 50px;
+	background-color: $charcoal;
+	background-color: rgba($charcoal, .8);
+	// color: $light-grey;
+	// color: rgba($offwhite, .7);
 
 	// SCREEN MIN-WIDTH 600px
 	@include tablet() {
-		float: right;
+		// float: right;
+		background-color: rgba($charcoal, 0);
 		width: 60%;
 		// margin-left: 40%;
-		padding-bottom: 40px;
-		margin: 30px 0;
+		// padding-bottom: 40px;
+		// margin: 30px 0;
+		padding: 20px 20% 10px;
 	}
 
 	// SCREEN MIN-WIDTH 1024px
 	@include tablet-w() {
-		// width: 30%;
-		// margin-left: 22%;
+		float: right;
+		display: inline-block;
+		// margin-bottom: 250px;
+		width: 40%;
+		margin: 0 10% 0 0;
+		padding: 0;
+		h2 {padding-top: 36px;}
 	}
 
 	// SCREEN MIN-WIDTH 1280px
 	@include laptop() {
-		width: 45%;
-		padding-bottom: 20px;
-		margin: 60px 0;
+		width: 38%;
+		margin: 0 12% 0 0;
+		// padding-bottom: 20px;
+		// margin: 60px 0;
 	}
 
 	@include desktop() {
-		margin: 60px 5% 60px 0;
+		width: 34%;
+		margin-right: 16%;
+		margin-top: 40px;
 	}
 
 	// SCREEN MIN-WIDTH 1440px
 	@include lgscreen() {
-		width: 35%;
-		margin: 60px 15% 60px 0;
+		width: 26%;
+		margin: 70px 24% 0 0;
 	}
 }
 .illustration-2 {
 	display: block;
 	width: 40%;
-	margin: 16px auto;
+	margin: 0 23% 0 37%;
+	padding-bottom: 10px;
 
 	// SCREEN MIN-WIDTH 600px
 	@include tablet() {
+		// display: inline-block;
+		// float: left;
+		width: 20%;
+		// margin: 53px 10% 50px;
+		margin: 0 37% 0 43%;
+	}
+
+	@include tablet-w() {
 		display: inline-block;
 		float: left;
-		width: 20%;
-		margin: 53px 10% 50px;
+		margin: 0 11% 0 19%;
 	}
 
 	// SCREEN MIN-WIDTH 280px
 	@include laptop() {
-		Width: 15%;
-		margin: 34px 17.5%;
+		// Width: 15%;
+		// margin: 34px 17.5%;
 	}
 
 	@include desktop() {
-		width: 12%;
-		margin: 85px 16.5% 0;
+		// width: 12%;
+		// margin: 85px 16.5% 0;
 	}
 
 	// SCREEN MIN-WIDTH 1440px
@@ -275,61 +378,83 @@ blockquote {
 	}
 }
 .description3 {
-	width: 100%;
-	padding-bottom: 40px;
+	width: 96%;
+	padding: 10px 2% 10px;
+	margin: 50px auto;
+	background-color: $charcoal;
+	background-color: rgba($charcoal, .8);
+	// color: $light-grey;
+	// color: rgba($offwhite, .7);
 
 	// SCREEN MIN-WIDTH 600px
 	@include tablet() {
-		float: left;
+		// float: left;
+		background-color: rgba($charcoal, 0);
 		width: 60%;
+		padding: 20px 20% 10px;
 	}
 
 	// SCREEN MIN-WIDTH 1024px
 	@include tablet-w() {
-		// width: 30%;
-		// margin-left: 16%;
+		display: inline-block;
+		// margin-bottom: 250px;
+		width: 40%;
+		margin: 0 0 0 10%;
+		padding: 0;
+		text-align: right;
+		h2 {padding-top: 36px;}
 	}
 
 	// SCREEN MIN-WIDTH 1280px
 	@include laptop() {
-		width: 45%;
-		margin-left: 5%;
-		padding-bottom: 20px;
-		text-align: right;
+		width: 38%;
+		margin-left: 12%;
+		// padding-bottom: 20px;
 	}
 
 	@include desktop() {
-		margin-top: 82px;
+		width: 34%;
+		margin-left: 16%;
+		margin-top: 50px;
 	}
 
 	// SCREEN MIN-WIDTH 1280px
 	@include lgscreen() {
-		width: 35%;
-		margin: 60px 0 0 15%;
+		width: 26%;
+		margin: 30px 0 0 24%;
 	}
 }
 .illustration-3 {
 	display: block;
 	width: 40%;
-	margin: 16px auto;
+	margin: 0 auto;
+	padding-bottom: 10px;
 
 	// SCREEN MIN-WIDTH 600px
 	@include tablet() {
+		// display: inline-block;
+		// float: right;
+		width: 20%;
+		// margin: 23px 10% 0;
+		margin: 0 40%;
+	}
+
+	@include tablet-w() {
 		display: inline-block;
 		float: right;
-		width: 20%;
-		margin: 23px 10% 0;
+		margin: 0 15%;
 	}
 
 	// SCREEN MIN-WIDTH 280px
 	@include laptop() {
-		Width: 15%;
-		margin: -22px 17.5%;
+		// Width: 15%;
+		// margin: -22px 17.5%;
 	}
 
 	@include desktop() {
-		width: 12%;
-		margin: 24px 19%;
+		// width: 12%;
+		margin-right: 18%;
+		margin-left: 12%;
 	}
 
 	// SCREEN MIN-WIDTH 1440px
@@ -342,6 +467,7 @@ blockquote {
 // DEMO
 .section2 {
 	width: 100%;
+	padding-top: 50px;
 
 	// SCREEN MIN-WIDTH 600px
 	@include tablet() {
@@ -367,151 +493,108 @@ blockquote {
 		position: relative;
 	}
 }
-.phone-mockup .slider-wrapper {
-	// SCREEN MIN-WIDTH 600px
+.slider-wrapper {
+	background-color: transparent;
+	// background-color: rgba($charcoal, 0);
 	@include tablet() {
 		position: absolute;
-		max-width: 311px;
+		width: 461px;
 		top: 92px;
-		left: 19px;
+		left: -55px;
+	}
+}
+.slider-wrapper .slide-img {
+	// SCREEN MIN-WIDTH 600px
+	@include tablet() {
+		max-width: 311px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
 
 // TESTIMONIALS
 .section3 {
-	margin-top: 50px;
+	margin-top: 80px;
 	width: 100%;
 
 	// SCREEN MIN-WIDTH 600px
 	@include tablet() {
 		margin-top: 100px;
 	}
-
-	// ul {
-	// 	list-style: none;
-	// 	margin: 0 auto;
-	// 	padding: 0;
-
-	// 	// SCREEN MIN-WIDTH 600px
-	// 	@include tablet() {
-	// 		width: 77%;
-	// 	}
-
-	// 	// SCREEN MIN-WIDTH 1024px
-	// 	@include tablet-w() {
-	// 		width: 100%;
-	// 	}
-
-	// 	@include laptop() {
-	// 		width: 90%;
-	// 	}
-	// }
-	// li {
-	// 	// SCREEN MIN-WIDTH 600px
-	// 	@include tablet() {
-	// 		display: block;
-	// 		width: 100%;
-	// 		margin: 40px 0;
-
-	// 		// CLEAR FLOAT
-	// 		&::after {
-	// 			clear: both;
-	// 			visibility: hidden;
-	// 			content: "";
-	// 			display: block;
-	// 			height: 0;
-	// 		}
-	// 	}
-
-	// 	// SCREEN MIN-WIDTH 1024px
-	// 	@include tablet-w() {
-	// 		display: inline-block;
-	// 		width: 30%;
-	// 		&:nth-child(2) {
-	// 			margin: 0 4.5%;
-	// 		}
-	// 	}
-
-	// 	@include laptop() {
-	// 		width: 25%;
-	// 		&:nth-child(2) {
-	// 			margin: 0 12%;
-	// 		}
-	// 	}
-	// }
-	// li > img {
-	// 	// SCREEN MIN-WIDTH 600px
-	// 	@include tablet() {
-	// 		display: inline-block;
-	// 		float: left;
-	// 		width: 45%;
-	// 	}
-
-	// 	// SCREEN MIN-WIDTH 1024px
-	// 	@include tablet-w() {
-	// 		display: inline-block;
-	// 		float: none;
-	// 		width: 100%;
-	// 		margin: 0;
-	// 	}
-	// }
-	// li > p {
-	// 	font-style: italic;
-
-	// 	// SCREEN MIN-WIDTH 600px
-	// 	@include tablet() {
-	// 		display: inline-block;
-	// 		float: right;
-	// 		width: 45%;
-	// 		vertical-align: top;
-	// 		margin: 12% 5%;
-	// 	}
-
-	// 	// SCREEN MIN-WIDTH 1024px
-	// 	@include tablet-w() {
-	// 		display: inline-block;
-	// 		float: none;
-	// 		margin: 0 0;
-	// 		width: 90%;
-	// 		padding: 0 5%;
-	// 	}
-	// }
-	// li:nth-child(2) {
-	// 	img {
-	// 		float: right;
-
-	// 		// SCREEN MIN-WIDTH 1024px
-	// 		@include tablet-w() {
-	// 			float: none;
-	// 		}
-	// 	}
-	// 	p {
-	// 		float: left;
-
-	// 		// SCREEN MIN-WIDTH 1024px
-	// 		@include tablet-w() {
-	// 			float: none;
-	// 		}
-	// 	}
-	// }
 }
-.section3 .slider-wrapper {
+.section3 {
 	// margin-top: 50px;
 	width: 100%;
 
 	@include tablet() {
 		margin-top: 100px;
-		width: 50%;
-		margin: 0 auto;
 	}
 }
+.slider-wrapper2 {
+	width: $small-width;
+	margin: 0 $small-margin;
+	background-color: transparent;
+	background-color: rgba($offwhite, 0);
+
+	@include tablet-w() {
+		width: $large-width;
+		margin: 0 $large-margin;
+	}
+}
+.slider-wrapper2 .slide1 p, .slider-wrapper2 .slide2 p, .slider-wrapper2 .slide3 p {
+
+	width: 76%;
+	margin: 20px 12%;
+	// background-color: $offwhite;
+	color: $offwhite;
+
+	@include tablet() {
+		width: 60%;
+		margin-left: 20%;
+		padding: 0;
+	}
+
+	@include laptop() {
+		width: 50%;
+		margin-left: 26%;
+	}
+
+	@include desktop() {
+		width: 40%;
+		margin-left: 30%;
+	}
+
+	@include lgscreen() {
+		width: 30%;
+		margin-left: 35%;
+	}
+}
+.slider-wrapper2 .slide2-img {
+	width: 76%;
+	max-width: 310px;
+	margin-left: auto;
+	margin-right: auto;
+	// margin: 30px auto;
+	// display: none;
+	@include tablet() {
+		width: 40%;
+		max-width: 310px;
+	}
+}
+#slider-control-nav2 {
+	top: 104%;
+}
+#slider-direction-nav2 {
+    top: 30%;
+}
+
 
 // BUTTON
 a > button {
 	width: 90%;
 	border: none;
-	margin: 50px 5%;
+	margin: 130px 5% 100px;
 	padding: 20px 0;
 	background-color: $orange;
 	text-transform: uppercase;
@@ -523,28 +606,31 @@ a > button {
 	@include tablet() {
 		margin-top: 70px;
 		width: 40%;
-		margin: 70px 30% 60px;
+		margin: 110px 30%;
 		padding: 30px 60px;
 		border: none;
+	}
+
+	@include tablet-w() {
+		margin: 150px 30%;
 	}
 
 	// SCREEN MIN-WIDTH 1280px
 	@include laptop() {
 		width: 35%;
-		margin: 70px 32.5% 60px;
+		margin: 150px 32.5%;
 	}
 
 	// SCREEN MIN-WIDTH 1440px
 	@include desktop() {
-		margin-top: 100px;
-		margin-bottom: 90px;
+		// margin-top: 100px;
+		// margin-bottom: 90px;
 	}
 
 	// SCREEN MIN-WIDTH 1920px
 	@include lgscreen() {
 		width: 30%;
-		margin-left: 35%;
-		margin-right: 35%;
+		margin: 150px 35%;
 	}
 }
 
@@ -559,7 +645,7 @@ a > button:hover {
 .sponsor-heading {
 	width: 100%;
 	text-align: center;
-	background-color: $offwhite;
+	background-color: transparent;
 	padding: 10px 0;
 	margin-bottom: 50px;
 }
@@ -567,8 +653,11 @@ a > button:hover {
 	margin-bottom: 60px;
 }
 // DESCRIPTION
-.sponsor-description {
-	width: 100%;
+.sponsor-us {
+	width: $small-width;
+	margin: 0 $small-margin;
+	color: $offwhite;
+	color: rgba($offwhite, .7);
 
 	// SCREEN MIN-WIDTH 600px
 	@include tablet() {
@@ -591,11 +680,27 @@ a > button:hover {
 		width: 40%;
 	}
 }
+.sponsor-description {
+
+	@include tablet() {
+		background-color: $charcoal;
+		background-color: rgba($charcoal, .9);
+	}
+	p {
+		width: 90%;
+		margin: 10px auto 20px;
+		text-transform: none;
+	}
+
+}
 // FORM
 form {
 	width: 100%;
-	border-top: 2px solid $orange;
-	padding-top: 16px;
+	margin: 50px auto -62px;
+	border-top-left-radius: 1em;
+	border-top-right-radius: 1em;
+	padding: 16px 0 50px;
+	background-color: $offwhite;
 	// CLEAR FLOAT
 	&::after {
 		clear: both;
@@ -609,7 +714,10 @@ label, input {
 	display: block;
 }
 label {
-	margin-bottom: 6px;
+	width: 92%;
+	margin: 10px auto;
+	// margin-bottom: 6px;
+	color: $dark-grey;
 
 	// SCREEN MIN-WIDTH 1280px
 	@include laptop() {
@@ -617,16 +725,17 @@ label {
 	}
 }
 input, textarea {
-	width: 99%;
-	margin-bottom: 10px;
+	width: 92%;
+	margin: 10px 4% 10px 3%;
+	// margin-bottom: 10px;
 }
 .sub-button {
-	width: 100px;
+	width: 120px;
 	float: right;
-	margin-right: 0;
-}
-.sub-button {
-
+	margin: 20px 4% 0 0;
+	padding: 8px 0;
+	background-color: $orange;
+	border: none;
 }
 
 // FOOTER
@@ -635,6 +744,7 @@ footer {
 	margin-top: 50px 0;
 	padding: 20px 2%;
 	background-color: $orange;
+	color: $dark-grey;
 	// CLEAR FLOAT
 	&::after {
 		clear: both;
