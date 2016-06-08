@@ -29,39 +29,52 @@
 		<!-- NAVIGATION MENU -->
 		<ul>
 			<a href="#about"><li class="menu-list" id="about-link">about</li></a>
-			<a href="#demo"><li class="menu-list" id="demo-link">demo</li></a>
+			<a href="#demo"><li class="menu-list" id="demo-link">download</li></a>
 			<a href="#contact"><li class="menu-list" id="contact-link">contact</li></a>
 		</ul>
 	</nav>
-	<!-- INTRO VIDEO -->
-	<div id="home" class="intro">
-		<img src="assets/img/videolg-placeholder.png">
-		<blockquote class="catch-phrase"><h2>stay in touch ...</h2> <h2>out of sight</h2></blockquote>
-	</div>
+<!-- 	<div id="bg1" data-0="background-position:0px 0px;" data-end="background-position:-500px -5000px;"></div>
+	<div id="bg2" data-0="background-position:0px 0px;" data-end="background-position:-500px -10000px;"></div>
+ -->	<!-- INTRO VIDEO -->
+	<div id="home" class="intro" data-0="0px 0px">
+		<video src="assets/img/video.mp4" type="video/mp4" autoplay></video>
+<!-- 		<blockquote class="catch-phrase"><h2>stay in touch ...</h2> <h2>out of sight</h2></blockquote>
+ --></div>
 	<!-- CONTENT CONTAINER -->
 	<div class="container">
+		<!-- GRAVITATE mission-->
+		<div id="mission">
+			<h1>stay in touch, out of sight.</h1>
+				<p>gravit&#257;te allows our users to roam free, yet be connected.</p>
+		</div>
 		<!-- INTRO SECTION -->
 		<div id="about" class="section1">
 			<!-- SECTION HEADING -->
 			<div class="heading"><h1><span class="gravitate">gravit&#257;te</span> is...</h1></div>
 			<!-- FIRST PRODUCT DESCRIPTION -->
-			<div class="describe description1">
-				<h2>having a flexible meeting destination</h2>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+			<div id="box">
+				<div class="description1">
+					<h2>meet up anywhere</h2>
+					<p>instead of having a set meet-up destination, choose any member of your group to be the planet that keeps everyone together.</p>
+				</div>
+				<img src="assets/img/icon1.svg" alt="" class="illustration-1">
 			</div>
-			<img src="assets/img/logo.png" alt="" class="illustration-1">
 			<!-- SECOND PRODUCT DESCRIPTION -->
-			<div class="describe description2">
-				<h2>staying in touch with friends</h2>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+			<div id="box">
+				<div class="description2">
+					<h2>stay in touch</h2>
+					<p>you can send notifications, pictures, and messages to keep group members up to date.</p>
+				</div>
+				<img src="assets/img/icon2.svg" alt="" class="illustration-2">
 			</div>
-			<img src="assets/img/logo.png" alt="" class="illustration-2">
 			<!-- THIRD PRODUCT DESCRIPTION -->
-			<div class="describe description3">
-				<h2>an all in one app</h2>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+			<div id="box">
+				<div class="description3">
+					<h2>all in one app</h2>
+					<p>we made life a bit easier by incorporating our needs of communication in our app.</p>
+				</div>
+				<img src="assets/img/icon3.svg" alt="" class="illustration-3">
 			</div>
-			<img src="assets/img/logo.png" alt="" class="illustration-3">
 		</div>
 		<div class="section2">
 			<!-- PRODUCT MOCKUP SLIDES -->
@@ -74,15 +87,21 @@
 					<div id="slider">
 						<!--begin slide 1-->
 						<div class="slide1">
-							<img src="assets/img/phone-placeholder1.gif" alt="description">
+							<div class="slide-img">
+								<img src="assets/img/phone-placeholder1.gif" alt="description">
+							</div>
 						</div><!--end slide 1-->
 						<!--begin slide 2-->
 						<div class="slide2">
-							<img src="assets/img/phone-placeholder2.gif" alt="description">
+							<div class="slide-img">
+								<img src="assets/img/phone-placeholder2.gif" alt="description">
+							</div>
 						</div><!--end slide 2-->
 						<!--begin slide 3-->
 						<div class="slide3">
-							<img src="assets/img/phone-placeholder3.gif" alt="description">
+							<div class="slide-img">
+								<img src="assets/img/phone-placeholder3.gif" alt="description">
+							</div>
 						</div><!--end slide 3-->
 					</div><!--end slides-->
 					<!--begin slider arrow navigation-->
@@ -113,22 +132,28 @@
 				</li>
 			</ul>
  -->				<!--begin slider-->
-				<div class="slider-wrapper">
+				<div class="slider-wrapper2">
 					<!--begin slides-->
 					<div id="slider2">
 						<!--begin slide 1-->
 						<div class="slide1">
-							<img src="assets/img/testimonial1-2.jpg" alt="description">
+							<div class="slide2-img">
+								<img src="assets/img/testimonial-1.jpg" alt="description">
+							</div>
 							<p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
 						</div><!--end slide 1-->
 						<!--begin slide 2-->
 						<div class="slide2">
-							<img src="assets/img/testimonial2.jpg" alt="description">
+							<div class="slide2-img">
+								<img src="assets/img/testimonial-2.jpg" alt="description">
+							</div>
 							<p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
 						</div><!--end slide 2-->
 						<!--begin slide 3-->
 						<div class="slide3">
-							<img src="assets/img/testimonial3.jpg" alt="description">
+							<div class="slide2-img">
+								<img src="assets/img/testimonial-3.jpg" alt="description">
+							</div>
 							<p>We lose each other at Pride every year, but gravit&#257;te makes it easy for us to find each other.</p>
 						</div><!--end slide 3-->
 					</div><!--end slides-->
@@ -139,7 +164,9 @@
 				</div><!--end slider-->
 
 			<!-- DOWNLOAD BUTTON -->
-			<a href="#"><button>download for ios</button></a>
+			<div id="demo">
+			<a href="https://www.apple.com" target="_blank"><button>download for ios</button></a>
+			</div>
 		</div>
 	</div>
 	<!-- FOOTER SECTION -->
@@ -150,7 +177,7 @@
 			1234 Planet St.<br>
 			San Francisco, CA 94108</p>
 			<p><a href="mailto:gravitate.contact@gmail.com">gravitate.contact@gmail.com</a></p>
-			<p class="sponsor-us"><a href="sponsor.html">become a sponsor</a></p>
+			<p class="sponsor-us"><a href="sponsor.html" target="_blank">become a sponsor</a></p>
 			</div>
 			<div class="social">
 				<h3>follow us</h3>
@@ -158,7 +185,7 @@
 				<a href="https://www.instagram.com"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
 				<a href="https://www.twitter.com"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
 			</div>
-			<div class="copy">&copy;2016 gravit&#257;te</div>
+			<div class="copy">&copy;2-16 gravit&#257;te</div>
 	</footer>
 </body>
 <script type="text/javascript">
@@ -171,6 +198,15 @@
             directionNav: '#slider-direction-nav2',
             controlNav: '#slider-control-nav2'
         });
+        // var s = skrollr.init({
+        // 	edgeStrategy: 'set',
+        // 	easing: {
+        // 		WTF: Math.random,
+        // 		inverted: function(p) {
+        // 			return 1-p;
+        // 		}
+        // 	}
+        // })
     });
 </script>
 </html>
