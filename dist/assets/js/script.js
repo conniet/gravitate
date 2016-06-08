@@ -51,49 +51,61 @@ $(document).ready(function(){
 	// CHANGE NAV BACKGROUND ON SCROLL FOR MOBILE
 	$(window).scroll(function() {
 		if($(window).scrollTop() >= 251) {
-			$('nav').css("background-color", "rgba(246,248,240,.9)");
+			// $('nav').css("background-color", "rgba(246,248,240,.9)");
+			$('nav').css("background-color", "rgba(16,26,30,.9)");
 		} else {
-			$('nav').css("background-color", "rgba(246,248,240,.6)");
+			// $('nav').css("background-color", "rgba(246,248,240,.6)");
+			$('nav').css("background-color", "rgba(16,26,30,.6)");
 		}
 	});
 	// CHANGE NAV BACKGROUND ON SCROLL FOR TABLET
 	$(window).scroll(function() {
 		if($(window).scrollTop() >= 548) {
-			$('nav').css("background-color", "rgba(246,248,240,.9)");
+			// $('nav').css("background-color", "rgba(246,248,240,.9)");
+			$('nav').css("background-color", "rgba(16,26,30,.9)");
 		} else {
-			$('nav').css("background-color", "rgba(246,248,240,.6)");
+			// $('nav').css("background-color", "rgba(246,248,240,.6)");
+			$('nav').css("background-color", "rgba(16,26,30,.6)");
 		}
 	});
 	// CHANGE NAV BACKGROUND ON SCROLL FOR SCREEN MIN-WIDTH 1024px
 	$(window).scroll(function() {
 		if($(window).scrollTop() >= 720) {
-			$('nav').css("background-color", "rgba(246,248,240,.9)");
+			// $('nav').css("background-color", "rgba(246,248,240,.9)");
+			$('nav').css("background-color", "rgba(16,26,30,.9)");
 		} else {
-			$('nav').css("background-color", "rgba(246,248,240,.6)");
+			// $('nav').css("background-color", "rgba(246,248,240,.6)");
+			$('nav').css("background-color", "rgba(16,26,30,.6)");
 		}
 	});
 	// CHANGE NAV BACKGROUND ON SCROLL FOR SCREEN MIN-WIDTH 1280px
 	$(window).scroll(function() {
 		if($(window).scrollTop() >= 890) {
-			$('nav').css("background-color", "rgba(246,248,240,.9)");
+			// $('nav').css("background-color", "rgba(246,248,240,.9)");
+			$('nav').css("background-color", "rgba(16,26,30,.9)");
 		} else {
-			$('nav').css("background-color", "rgba(246,248,240,.6)");
+			// $('nav').css("background-color", "rgba(246,248,240,.6)");
+			$('nav').css("background-color", "rgba(16,26,30,.6)");
 		}
 	});
 	// CHANGE NAV BACKGROUND ON SCROLL FOR SCREEN MIN-WIDTH 1440px
 	$(window).scroll(function() {
 		if($(window).scrollTop() >= 1000) {
-			$('nav').css("background-color", "rgba(246,248,240,.9)");
+			// $('nav').css("background-color", "rgba(246,248,240,.9)");
+			$('nav').css("background-color", "rgba(16,26,30,.9)");
 		} else {
-			$('nav').css("background-color", "rgba(246,248,240,.6)");
+			// $('nav').css("background-color", "rgba(246,248,240,.6)");
+			$('nav').css("background-color", "rgba(16,26,30,.6)");
 		}
 	});
 	// CHANGE NAV BACKGROUND ON SCROLL FOR SCREEN MIN-WIDTH 1920px
 	$(window).scroll(function() {
 		if($(window).scrollTop() >= 1334) {
-			$('nav').css("background-color", "rgba(246,248,240,.9)");
+			// $('nav').css("background-color", "rgba(246,248,240,.9)");
+			$('nav').css("background-color", "rgba(16,26,30,.9)");
 		} else {
-			$('nav').css("background-color", "rgba(246,248,240,.6)");
+			// $('nav').css("background-color", "rgba(246,248,240,.6)");
+			$('nav').css("background-color", "rgba(16,26,30,.9)");
 		}
 	});
 });
