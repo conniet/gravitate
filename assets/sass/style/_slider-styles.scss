@@ -3,12 +3,12 @@
  * http://dev7studios.com/lean-slider
  */
 
-.slider-wrapper {
+.slider-wrapper, .slider-wrapper2 {
     position: relative;
     background: #fff url(../img/loading.gif) no-repeat 50% 50%;
-    -moz-box-shadow: 0 0 3px rgba(0,0,0,0.4);
-    -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.4);
-    box-shadow: 0 0 3px rgba(0,0,0,0.4);
+    // -moz-box-shadow: 0 0 3px rgba(0,0,0,0.4);
+    // -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.4);
+    // box-shadow: 0 0 3px rgba(0,0,0,0.4);
 }
 .lean-slider { overflow: hidden; }
 .lean-slider-slide {
@@ -39,12 +39,12 @@
     transition: opacity 0.2s linear;
     opacity: 0.2;
 }
-.slider-wrapper:hover #slider-direction-nav, .slider-wrapper:hover #slider-direction-nav2 { opacity: 1; }
+.slider-wrapper:hover #slider-direction-nav, .slider-wrapper2:hover #slider-direction-nav2 { opacity: 1; }
 #slider-direction-nav a, #slider-direction-nav2 a {
     float: left;
     display: block;
-    width: 26px;
-    height: 37px;
+    width: 45px;
+    height: 52px;
     background: url(../img/arrows.png) no-repeat 0 0;
     text-indent: -9999px;
 }
@@ -66,7 +66,7 @@
     transition: opacity 0.2s linear;
     opacity: 0.2;
 }
-.slider-wrapper:hover #slider-control-nav, .slider-wrapper:hover #slider-control-nav2 { opacity: 1; }
+.slider-wrapper:hover #slider-control-nav, .slider-wrapper2:hover #slider-control-nav2 { opacity: 1; }
 #slider-control-nav a, #slider-control-nav2 a {
     display: inline-block;
     width: 14px;
