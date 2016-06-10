@@ -34,6 +34,7 @@ nav .home-logo {
 	// SCREEN MIN-WIDTH 600px
 	@include tablet() {
 		padding-top: 6px;
+		padding-bottom: 1px;
 	}
 
 	// SCREEN MIN-WIDTH 1024px
@@ -66,13 +67,13 @@ nav ul {
 	@include tablet() {
 		display: inline-block;
 		width: auto;
-		margin-top: 4%;
+		margin-top: 4.2%;
 	}
 
 	// SCREEN MIN-WIDTH 1024px
 	@include tablet-w() {
 		// margin: 3% 5px 0;
-		margin-top: 3%;
+		margin-top: 3.2%;
 	}
 
 	// SCREEN MIN-WIDTH 1280px
@@ -86,9 +87,11 @@ nav ul {
 		// SCREEN MIN-WIDTH 600px
 		@include tablet() {
 			display: inline-block;
-			width: 80px;
+			width: 120px;
 			padding: 0;
 			text-align: center;
+
 		}
 	}
 }
+#about-link {margin-right: -5px;}
