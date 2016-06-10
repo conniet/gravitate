@@ -30,11 +30,11 @@ video {width: 100%;}
 // INTRODUCTION
 .intro {
 	width: 100%;
-	height: 100vh;
-	background-image: url('../img/hero-bg.png');
-	background-repeat: repeat;
-	background-attachment: fixed;
-	background-position: 50% 0;
+	// height: 100vh;
+	// background-image: url('../img/hero-bg.png');
+	// background-repeat: repeat;
+	// background-attachment: fixed;
+	// background-position: 50% 0;
 }
 .hero {
 	width: 100%;
@@ -53,10 +53,11 @@ video {width: 100%;}
 	// SCREEN MIN-WIDTH 1280PX
 	@include laptop() {
 		background-image: none;
+		height: auto;
 		video {
 			display: block;
-			height: 100vh;
-			background-image: url('../img/hero-bg.png');
+			// height: 100vh;
+			// background-image: url('../img/hero-bg.png');
 			background-repeat: repeat;
 			background-position: 50% 0;
 		}
@@ -68,17 +69,24 @@ video {width: 100%;}
 	background-color: $offwhite;
 	text-align: center;
 	color: $dark-grey;
+	position: relative;
 }
 .statement {
 	width: $small-width;
 	margin: 0 $small-margin;
-	padding-top: 60%;
+	// padding-top: 60%;
+	position: absolute;
+	top: 45%;
+	left: 50;
 
 	// SCREEN MIN-WIDTH 1024px
-	@include tablet-w() {padding-top: 32%;}
+	// @include tablet-w() {padding-top: 32%;}
+
+	// SCREEN MIN-WIDTH 1280px
+	// @include laptop() {padding-top:20%;}
 
 	// SCREEN MIN-WIDTH 1440px
-	@include desktop() {padding-top: 28%;}
+	// @include desktop() {padding-top: 28%;}
 }
 
 // ABOUT
@@ -392,7 +400,7 @@ video {width: 100%;}
 		position: absolute;
 		width: 461px;
 		top: 92px;
-		left: -55px;
+		left: -56px;
 	}
 }
 .slider-wrapper .slide-img {
@@ -402,6 +410,9 @@ video {width: 100%;}
 		margin-left: auto;
 		margin-right: auto;
 	}
+}
+#slider-control-nav {
+	display: none;
 }
 
 
@@ -479,7 +490,8 @@ video {width: 100%;}
 	}
 }
 #slider-control-nav2 {
-	top: 104%;
+	// top: 104%;
+	display: none;
 }
 #slider-direction-nav2 {
     top: 28%;
