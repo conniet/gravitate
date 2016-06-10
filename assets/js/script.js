@@ -11,7 +11,7 @@ $(document).ready(function(){
 		$('#about-link').click(function() {
 			$('.menu-list').hide();
 		});
-		$('#demo-link').click(function() {
+		$('#download-link').click(function() {
 			$('.menu-list').hide();
 		});
 		$('#contact-link').click(function() {
@@ -34,9 +34,9 @@ $(document).ready(function(){
 		}, 500);
 	});
 	// SCROLL TO DEMO SECTION
-	$('nav').on('click','#demo-link', function() {
+	$('nav').on('click','#download-link', function() {
 		$('html, body').animate({
-			scrollTop: $('#demo').offset().top
+			scrollTop: $('#download').offset().top
 		}, 500);
 	});
 	// SCROLL TO CONTACT SECTION
