@@ -159,7 +159,7 @@
 
     // Defaults
     $.fn.leanSlider.defaults = {
-        pauseTime: 3000,
+        pauseTime: 4000,
         pauseOnHover: true,
         startSlide: 0,
         directionNav: '',
