@@ -1,0 +1,84 @@
+// FOOTER
+footer {
+	width: 96%;
+	margin-top: 50px 0;
+	margin-top: 3.12em 0;
+	padding: 20px 2%;
+	padding: 1.24em 2%;
+	background-color: $orange;
+	color: $dark-grey;
+	// CLEAR FLOAT
+	&::after {
+		clear: both;
+		visibility: hidden;
+		content: "";
+		display: block;
+		height: 0;
+	}
+
+	// SCREEN MIN-WIDTH 1024px
+	@include tablet-w() {
+		width: 84%;
+		padding: 20px 8%;
+		padding: 1.24em 8%;
+	}
+}
+footer a:active, footer a:link, footer a:visited {
+	color: $offwhite;
+	font-weight: 400;
+	// HOVER TRANSITION
+	@include hoverTransition (.5s, ease-in-out);
+}
+footer a:hover {
+	color: $purple;
+}
+.contact {
+	width: 100%;
+
+	// SCREEN MIN-WIDTH 600px
+	@include tablet() {
+		float: left;
+		width: 50%;
+	}
+}
+.sponsor-gravitate {text-transform: uppercase;}
+.social {
+	width: 46%;
+	float: left;
+	text-align: justify;
+	margin-top: -16px;
+	margin-top: -1em;
+	i {
+		color: $offwhite;
+		@include hoverTransition (.5s, ease-in-out);
+	}
+	i:hover {
+		color: $purple;
+	}
+
+	// SCREEN MIN-WIDTH 600px
+	@include tablet() {
+		float: right;
+		width: 20%;
+		margin-top: 0;
+	}
+}
+.social::after {
+	content: '';
+	width: 100%;
+	display: inline-block;
+}
+.social > h3 {
+	color: $offwhite;
+	font-weight: bold;
+
+	// SCREEN MIN-WIDTH 600px
+	@include tablet() {
+		text-align: center;
+	}
+}
+.copy {
+	float: left;
+	width: 100%;
+	text-align: center;
+}

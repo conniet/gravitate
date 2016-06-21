@@ -23,18 +23,22 @@ nav {
 		padding: 0 8%;
 	}
 }
-nav .home-logo {
+nav .home-logo, .nav2 .home-logo {
 	display: inline-block;
 	float: left;
 	width: 15%;
 	max-width: 75px;
+	max-width: 4.7em;
 	position: relative;
 	padding-top: 4px;
+	padding-top: .24em;
 
 	// SCREEN MIN-WIDTH 600px
 	@include tablet() {
 		padding-top: 6px;
+		padding-top: .35em;
 		padding-bottom: 1px;
+		padding-bottom: .1em;
 	}
 
 	// SCREEN MIN-WIDTH 1024px
@@ -44,10 +48,11 @@ nav .home-logo {
 		max-height: none;
 	}
 }
-nav i {
+nav i, .nav2 i {
 	display: block;
 	float: right;
-	padding: 22px 4px 0 0;
+	padding: 21px 4px 0 0;
+	padding: 1em .18em 0 0;
 	color: $purple;
 
 	// SCREEN MIN-WIDTH 600px
@@ -55,7 +60,7 @@ nav i {
 		display: none !important;
 	}
 }
-nav ul {
+nav ul, .nav2 ul {
 	list-style: none;
 	display: block;
 	position: relative;
@@ -83,11 +88,13 @@ nav ul {
 	}
 	li {
 		padding: 10px 20px;
+		padding: .63em 1.26em;
 
 		// SCREEN MIN-WIDTH 600px
 		@include tablet() {
 			display: inline-block;
 			width: 120px;
+			width: 7em;
 			padding: 0;
 			text-align: center;
 
@@ -95,3 +102,29 @@ nav ul {
 	}
 }
 #about-link {margin-right: -5px;}
+
+// SPONSOR PAGE NAVIGATION
+.nav2 {
+	position: fixed;
+	top: 0;
+	z-index: 9999;
+	width: 98%;
+	padding: 0 1%;
+	background-color: $charcoal;
+	background-color: rgba($charcoal, .9);
+	text-transform: uppercase;
+	cursor: pointer;
+	// CLEAR FLOAT
+	&::after {
+		clear: both;
+		visibility: hidden;
+		content: "";
+		display: block;
+		height: 0;
+	}
+	// SCREEN MIN-WIDTH 1024px
+	@include tablet-w() {
+		width: 84%;
+		padding: 0 8%;
+	}
+}
